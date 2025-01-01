@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="#FFF8FA">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <!-- En-tête avec logo et icône de menu -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:background="@color/white"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/logo"
+            android:contentDescription="Logo Fleuriste" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:id="@+id/ic_home"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/ic_home"
+            android:contentDescription="Icône Menu" />
+    </LinearLayout>
+
+    <!-- Contenu principal -->
+
+    <!-- Bouton Login et image -->
+    <!-- Footer -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="Bienvenue chez FleurMarket🌸"
+            android:textColor="#4C0A5C"
+            android:textSize="24sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="sans-serif"
+            android:text="Explorez les meilleures boutiques de fleurs à un seul endroit."
+            android:textColor="#A84F9E"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:lineSpacingExtra="4dp"
+            android:text="Chez FleurMarket, trouvez des bouquets et des arrangements floraux uniques de vos fleuristes préférés. Comparez, choisissez et faites livrer vos fleurs directement à votre porte."
+            android:textColor="#666666"
+            android:textSize="14sp" />
+
+        <!-- Boutons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal">
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Image en haut -->
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="285dp"
+            android:contentDescription="Image à droite"
+            android:scaleType="centerCrop"
+            android:src="@drawable/bouquet" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:padding="8dp" />
+
+        <Button
+            android:id="@+id/logoutBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Logout"
+            android:textSize="18sp" />
+
+        <!-- Bouton Login en bas -->
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="#EFC0EF"
+        android:gravity="center">
+
+        <!-- Texte de copyright -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="© 2024 FleurMarket🌸. Tous droits réservés."
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- Liens du footer -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <!-- Lien À propos -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="À propos"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:layout_marginEnd="16dp"
+                android:clickable="true"
+                android:onClick="onAboutClick"/>
+
+            <!-- Lien Contact -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Contact"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:clickable="true"
+                android:onClick="onContactClick"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
+</ScrollView>

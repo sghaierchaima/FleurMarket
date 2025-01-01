@@ -1,0 +1,119 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/color_5"
+    android:padding="16dp"
+    tools:context=".ajouterFleurs">
+
+    <!-- LinearLayout pour contenir les enfants -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Image animée en haut -->
+        <ImageView
+            android:id="@+id/animated_image"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:layout_gravity="center"
+            android:background="@drawable/flower_animation"
+            android:contentDescription="Image animée de fleur" />
+
+        <!-- Espacement après l'image -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="16dp" />
+
+        <!-- Titre -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ajouter "
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="24dp"
+            android:textColor="@color/dark_purple" />
+
+        <!-- Champ pour le nom de la fleur -->
+        <EditText
+            android:id="@+id/flower_name_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nom de la fleur"
+            android:inputType="text"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Champ pour la catégorie -->
+        <EditText
+            android:id="@+id/flower_category_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Catégorie"
+            android:inputType="text"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Champ pour le prix -->
+        <EditText
+            android:id="@+id/flower_price_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Prix"
+            android:inputType="numberDecimal"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Champ pour la description -->
+        <EditText
+            android:id="@+id/flower_description_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Description"
+            android:inputType="textMultiLine"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Bouton pour uploader une image -->
+        <Button
+            android:id="@+id/upload_image_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Uploader une image"
+            android:layout_gravity="center"
+            android:layout_marginBottom="16dp" />
+
+        <!-- ImageView pour afficher l'image sélectionnée -->
+        <ImageView
+            android:id="@+id/flowerImage"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:layout_marginBottom="16dp"
+            android:contentDescription="Image de la fleur" />
+
+        <!-- ProgressBar pour indiquer le téléversement -->
+        <ProgressBar
+            android:id="@+id/upload_progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:contentDescription="Image de la fleur"
+            android:src="@drawable/warda" />
+        <!-- Bouton pour ajouter la fleur -->
+        <Button
+            android:id="@+id/add_flower_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ajouter la fleur"
+            android:backgroundTint="@color/dark_purple"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+</ScrollView>

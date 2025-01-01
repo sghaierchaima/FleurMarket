@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@color/color_5"
+    tools:context=".editFlowers">
+
+<!-- Image animée en haut -->
+<ImageView
+    android:id="@+id/animated_image"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:layout_gravity="center"
+    android:scaleType="centerCrop"
+    android:src="@drawable/warda"
+    android:contentDescription="Image animée de fleur" />
+
+<!-- Titre -->
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Modifier les informations de la fleur"
+    android:textSize="20sp"
+    android:textStyle="bold"
+    android:layout_gravity="center"
+    android:layout_marginTop="16dp"
+    android:layout_marginBottom="24dp"
+    android:textColor="@color/dark_purple" />
+
+<!-- Champ Nom de la fleur -->
+<EditText
+    android:id="@+id/edit_nom"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:hint="Nom de la fleur"
+    android:inputType="text"
+    android:layout_marginBottom="12dp"
+    android:padding="10dp"
+    android:textColor="@color/black" />
+
+<!-- Champ Catégorie -->
+<EditText
+    android:id="@+id/edit_categorie"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:hint="Catégorie"
+    android:inputType="text"
+    android:layout_marginBottom="12dp"
+
+    android:padding="10dp"
+    android:textColor="@color/black" />
+
+<!-- Champ Prix -->
+<EditText
+    android:id="@+id/editP"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:hint="Prix (TND)"
+    android:inputType="numberDecimal"
+    android:layout_marginBottom="24dp"
+    android:padding="10dp"
+    android:textColor="@color/black" />
+    <EditText
+        android:id="@+id/edit_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nom de la fleur"
+        android:inputType="text"
+        android:layout_marginBottom="12dp"
+        android:padding="10dp"
+        android:textColor="@color/black" />
+
+<!-- Boutons Modifier et Annuler -->
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="end">
+
+    <!-- Bouton Annuler -->
+    <Button
+        android:id="@+id/cancel_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Annuler"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="@color/red"
+        android:textColor="@color/white" />
+
+    <!-- Bouton Modifier -->
+    <Button
+        android:id="@+id/saveB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Modifier"
+        android:backgroundTint="@color/green"
+        android:textColor="@color/white" />
+</LinearLayout>
+</LinearLayout>

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "234338654495",
+    "project_id": "monapp-v5",
+    "storage_bucket": "monapp-v5.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:234338654495:android:66c76a8c2d6549dbd1382a",
+        "android_client_info": {
+          "package_name": "com.example.monapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAS2DOyQfBMzXiatbDuAHEV1JBadacL82Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
