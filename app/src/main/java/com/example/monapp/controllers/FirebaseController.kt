@@ -44,21 +44,25 @@ class FirebaseController {
     // Uploader une image et obtenir son URL
     fun uploadImage(imageUri: Uri, onComplete: (String?) -> Unit) {
         val storageRef = FirebaseStorage.getInstance().reference
-        val fileName = "images/${System.currentTimeMillis()}.jpg"  // Nom unique pour chaque image
+        val fileName = "images/${System.currentTimeMillis()}.jpg"
         val imageRef = storageRef.child(fileName)
 
         imageRef.putFile(imageUri)
             .addOnSuccessListener {
                 imageRef.downloadUrl
                     .addOnSuccessListener { uri ->
+                        Log.d("Firebase", "Image uploaded successfully: $uri")
                         onComplete(uri.toString())  // Renvoie l'URL de l'image
                     }
                     .addOnFailureListener { exception ->
+                        Log.e("Firebase", "Failed to get download URL", exception)
                         onComplete(null)  // En cas d'échec
                     }
             }
             .addOnFailureListener { exception ->
+                Log.e("Firebase", "Image upload failed", exception)
                 onComplete(null)  // En cas d'échec
             }
     }
+
 }

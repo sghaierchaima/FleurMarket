@@ -1,0 +1,102 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp"
+    android:background="@android:color/white"
+    android:layout_margin="8dp"
+    android:elevation="4dp">
+
+    <!-- Image de la fleur -->
+    <ImageView
+        android:id="@+id/flowerImageView"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/fleurs" />
+
+    <!-- Étiquette de promotion, si disponible -->
+    <TextView
+        android:id="@+id/promotionLabelTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-30dp"
+        android:layout_marginLeft="8dp"
+        android:padding="4dp"
+        android:text="-60%"
+        android:textColor="@android:color/white"
+        android:textStyle="bold" />
+
+    <!-- Nom de la fleur -->
+    <TextView
+        android:id="@+id/flowerNameTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Nom de la fleur"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:gravity="center" />
+
+    <!-- Prix de la fleur -->
+    <TextView
+        android:id="@+id/flowerPriceTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text=""
+        android:textSize="16sp"
+        android:textColor="#A84F9E"
+        android:textStyle="bold"
+        android:gravity="center" />
+
+    <!-- Nom de la boutique -->
+    <TextView
+        android:id="@+id/shopNameTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text=""
+        android:textSize="16sp"
+        android:textColor="#A84F9E"
+        android:gravity="center"
+        android:textStyle="italic"/>
+    <!-- Nom de la boutique -->
+    <TextView
+        android:id="@+id/descriptionTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text=""
+        android:textSize="16sp"
+        android:textColor="#A84F9E"
+        android:gravity="center"
+        android:textStyle="italic"/>
+
+    <!-- Icône du favori -->
+    <ImageView
+        android:id="@+id/favoriteIcon"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_gravity="end"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/coeur" />
+    <!-- Icône Ajouter au panier -->
+    <ImageView
+        android:id="@+id/addToCartIcon"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/panier"
+        android:visibility="gone"
+        android:layout_margin="8dp"/>
+
+    <!-- RecyclerView pour afficher la liste des fleurs -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewFlowers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp" />
+
+</LinearLayout>

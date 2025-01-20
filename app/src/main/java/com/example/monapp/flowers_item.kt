@@ -23,7 +23,7 @@ class flowers_item (private val flowers: List<Flower>) : RecyclerView.Adapter<fl
             if (imageUrl.isNullOrEmpty()) {
                 // Charger une image par défaut si l'URL est vide ou nulle
                 Glide.with(binding.root.context)
-                    .load(R.drawable.warda) // Remplacez par votre image par défaut
+                    .load(R.drawable.warda) //  image par défaut
                     .into(binding.warda)
             } else {
                 // Charger l'image depuis l'URL

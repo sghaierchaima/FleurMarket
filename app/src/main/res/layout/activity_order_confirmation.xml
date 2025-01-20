@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Affichage des détails de la commande -->
+    <TextView
+        android:id="@+id/detailsTextView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:textSize="16sp"
+        android:padding="8dp"
+        android:text="Détails de la commande apparaîtront ici" />
+
+    <!-- Libellé et Spinner pour la méthode de paiement -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sélectionnez une méthode de paiement :"
+        android:textSize="16sp"
+        android:layout_marginTop="8dp" />
+
+    <Spinner
+        android:id="@+id/paymentMethodSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <!-- Libellé et Spinner pour la méthode de livraison -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sélectionnez une méthode de livraison :"
+        android:textSize="16sp"
+        android:layout_marginTop="16dp" />
+
+    <Spinner
+        android:id="@+id/deliveryMethodSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <!-- Boutons d'action -->
+    <Button
+        android:id="@+id/btnConfirmer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Confirmer"
+        android:layout_marginTop="16dp"
+        android:enabled="false" />
+
+    <Button
+        android:id="@+id/btnAnnuler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Annuler" />
+</LinearLayout>

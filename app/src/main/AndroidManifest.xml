@@ -18,6 +18,30 @@
         android:theme="@style/Theme.MonApp"
         tools:targetApi="31">
         <activity
+            android:name=".OrderConfirmationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CartAdapter"
+            android:exported="false" />
+        <activity
+            android:name=".CartActivity"
+            android:exported="false" />
+        <activity
+            android:name=".FlowersAdapter"
+            android:exported="false" />
+        <activity
+            android:name=".FlowerActivityB"
+            android:exported="false" />
+        <activity
+            android:name=".FlowersActivityAdapter"
+            android:exported="false" />
+        <activity
+            android:name=".FlowersActivityuser"
+            android:exported="false" />
+        <activity
+            android:name=".FlowersActivity"
+            android:exported="false" />
+        <activity
             android:name=".nomBoutique"
             android:exported="false" />
         <activity

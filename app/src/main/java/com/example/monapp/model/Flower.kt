@@ -1,7 +1,10 @@
 package com.example.monapp.model
 
+import android.os.Parcelable
 import com.google.firebase.firestore.PropertyName
+import kotlinx.parcelize.Parcelize
 
+@Parcelize
 data class Flower(
 
     val nom: String = "",
@@ -18,4 +21,4 @@ data class Flower(
     @PropertyName("imageUrl")
     var imageUrl: String? = null,
     var userId: String = ""
-)
+):Parcelable

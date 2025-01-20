@@ -1,5 +1,6 @@
 package com.example.monapp
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -41,6 +42,13 @@ class nomBoutique : RecyclerView.Adapter<nomBoutique.NameshopViewHolder>() {
 
         fun bind(nameshop: String) {
             nameshopTextView.text = nameshop
+            nameshopTextView.setOnClickListener {
+                // Rediriger vers l'activité des fleurs avec le nom de la boutique
+                val intent = Intent(itemView.context, FlowerActivityB::class.java).apply {
+                    putExtra("shopName", nameshop)
+                }
+                itemView.context.startActivity(intent)  // Utilisez itemView.context ici
+            }
         }
     }
 }

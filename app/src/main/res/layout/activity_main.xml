@@ -117,6 +117,14 @@ android:background="#FFF8FA">
             android:textSize="18sp" />
 
         <!-- Bouton Login en bas -->
+        <ImageView
+            android:id="@+id/cartIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/panier"
+        android:contentDescription="Panier"
+        android:layout_margin="16dp"
+        android:layout_gravity="end|top" />
 
     </LinearLayout>
 

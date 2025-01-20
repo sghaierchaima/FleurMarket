@@ -2,6 +2,7 @@ package com.example.monapp
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.ImageView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -33,6 +34,19 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
             finish()
         }
+        val cartIcon: ImageView = findViewById(R.id.cartIcon)
+
+        // Ajouter un clic sur l'icône pour ouvrir CartActivity
+        cartIcon.setOnClickListener {
+            val cartItems = CartManager.getAllCartItems()
+            if (cartItems.isEmpty()) {
+                Toast.makeText(this, "Le panier est vide !", Toast.LENGTH_SHORT).show()
+            } else {
+                val intent = Intent(this, CartActivity::class.java)
+                intent.putParcelableArrayListExtra("cart_items", ArrayList(CartManager.getAllCartItems()))
+                startActivity(intent)
+            }
+        }
     }
 
     private fun setupRecyclerView() {
@@ -60,4 +74,5 @@ class MainActivity : AppCompatActivity() {
                 Toast.makeText(this, "Erreur : ${exception.message}", Toast.LENGTH_SHORT).show()
             }
     }
+
 }
